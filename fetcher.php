@@ -71,6 +71,7 @@ class Fetcher
             '(第(?:\d+-)?([.\d]+)(?: ?v\d| ?END)?话)iumsS',
             '(第(?:\d+-)?([.\d]+)(?: ?v\d| ?END)?話)iumsS',
             '(\[(?:\d+-)?([.\d]+)(?: ?v\d| ?END)?\])iumsS',
+            '(【(?:\d+-)?([.\d]+)(?: ?v\d| ?END)?】)iumsS',
         ];
         if (!empty($epPat))
         {
