@@ -2,6 +2,9 @@
 
 $s201710 = array
 (/*{{{*/
+    '犬屋敷' => array(
+        'query' => '犬屋敷 team_id:241 GB',
+        ),
     '宝石之国' => array(
         'query' => '寶石之國 team_id:407',
         ),
