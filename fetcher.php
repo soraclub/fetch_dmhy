@@ -116,7 +116,7 @@ class Fetcher
             //check ep num
             if ($epNum <= $curEp)
             {
-//                echo "no need. req ep > $curEp, thisEp:$epNum, of #$name#\n";
+                echo "no need. req ep > $curEp, thisEp:$epNum, of #$name#\n";
                 continue;
             }
             //fetch torrent
