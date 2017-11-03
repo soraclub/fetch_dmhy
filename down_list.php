@@ -2,6 +2,9 @@
 
 $s201710 = array
 (/*{{{*/
+    '黑色五叶草' => array(
+        'query' => '五葉草 team_id:651',
+        ),
     '犬屋敷' => array(
         'query' => '犬屋敷 team_id:241 GB',
         ),
