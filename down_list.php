@@ -35,8 +35,8 @@ $s201710 = array
     '品酒要在成为夫妻后' => array(
         'query' => '品酒要在 team_id:407',
         ),
-    '食戟之灵3' => array(
-        'query' => '食戟 餐之皿 team_id:49',
+    '食戟之灵3_ktxp' => array(
+        'query' => '食戟 team_id:185 GB san',
         ),
     '十二大战' => array(
         'query' => '十二大战 team_id:185 GB 720P',
