@@ -6,12 +6,6 @@ $s201710 = array
     '黑色五叶草' => array(
         'query' => '五葉草 team_id:651',
         ),
-    '犬屋敷' => array(
-        'query' => '犬屋敷 team_id:241 GB',
-        ),
-    '宝石之国' => array(
-        'query' => '寶石之國 team_id:407',
-        ),
     '奇诺之旅2017' => array(
         'query' => '奇諾 team_id:468 简体',
         ),
@@ -23,9 +17,6 @@ $s201710 = array
         ),
     'JustBecause' => array(
         'query' => 'Just Because team_id:303 简体',
-        ),
-    '关于我女友是个正经' => array(
-        'query' => '女友是 team_id:468 简体',
         ),
     '此花亭奇谭' => array(
         'query' => '此花 team_id:679 GB',
@@ -39,16 +30,8 @@ $s201710 = array
     '食戟之灵3_ktxp' => array(
         'query' => '食戟 team_id:185 GB san',
         ),
-    '十二大战' => array(
-        'query' => '十二大战 team_id:185 GB 720P',
-        'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
-        ),
     '干物妹2' => array(
         'query' => '干物妹 team_id:185 720P',
-        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
-        ),
-    '如果有妹妹就好了' => array(
-        'query' => '有妹妹 team_id:303 简体',
         'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
         ),
     '动画同好会' => array(
@@ -75,6 +58,19 @@ $s201710 = array
 );/*}}}*/
 $s201707 = array
 (/*{{{*/
+    '犬屋敷' => array(
+        'query' => '犬屋敷 team_id:241 GB',
+        ),
+    '宝石之国' => array(
+        'query' => '寶石之國 team_id:407',
+        ),
+    '关于我女友是个正经' => array(
+        'query' => '女友是 team_id:468 简体',
+        ),
+    '十二大战' => array(
+        'query' => '十二大战 team_id:185 GB 720P',
+        'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
+        ),
     'Fate_Apocrypha' => array(
         'query' => 'Apocrypha team_id:58',
         'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
@@ -96,6 +92,13 @@ $slong= array
 
 return array_merge($s201707, $s201710);
 
+$s201710_done = array
+(/*{{{*/
+    '如果有妹妹就好了' => array(
+        'query' => '有妹妹 team_id:303 简体',
+        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
+        ),
+);/*}}}*/
 $s201707_done = array
 (/*{{{*/
     '战姬绝唱AXZ' => array(
