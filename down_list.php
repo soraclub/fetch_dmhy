@@ -9,23 +9,14 @@ $s201710 = array
     '奇诺之旅2017' => array(
         'query' => '奇諾 team_id:468 简体',
         ),
-    '少女终末旅行' => array(
-        'query' => '女終 team_id:468 简体',
-        ),
     '国王游戏' => array(
         'query' => '國王遊戲 team_id:141',
-        ),
-    'JustBecause' => array(
-        'query' => 'Just Because team_id:303 简体',
         ),
     '此花亭奇谭' => array(
         'query' => '此花 team_id:679 GB',
         ),
     'URAHARA' => array(
         'query' => 'URAHARA team_id:669 GB 720P',
-        ),
-    '品酒要在成为夫妻后' => array(
-        'query' => '品酒要在 team_id:407',
         ),
     '食戟之灵3_ktxp' => array(
         'query' => '食戟 team_id:185 GB san',
@@ -42,10 +33,6 @@ $s201710 = array
         'query' => '血界 BEYOND team_id:663 简体',
         'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
         ),
-    '调教咖啡厅' => array(
-        'query' => '調教咖 team_id:321',
-        'ep_pat' => '\[第(?:\d+-)?()(?:v\d| ?END)?话\]',//()表示([.\d]+)
-        ),
     '魔法使的新娘' => array(
         'query' => '魔法使 新娘 team_id:303 简体 720P',
         'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
@@ -58,19 +45,6 @@ $s201710 = array
 );/*}}}*/
 $s201707 = array
 (/*{{{*/
-    '犬屋敷' => array(
-        'query' => '犬屋敷 team_id:241 GB',
-        ),
-    '宝石之国' => array(
-        'query' => '寶石之國 team_id:407',
-        ),
-    '关于我女友是个正经' => array(
-        'query' => '女友是 team_id:468 简体',
-        ),
-    '十二大战' => array(
-        'query' => '十二大战 team_id:185 GB 720P',
-        'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
-        ),
     'Fate_Apocrypha' => array(
         'query' => 'Apocrypha team_id:58',
         'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
@@ -94,6 +68,32 @@ return array_merge($s201707, $s201710);
 
 $s201710_done = array
 (/*{{{*/
+    '少女终末旅行' => array(
+        'query' => '女終 team_id:468 简体',
+        ),
+    'JustBecause' => array(
+        'query' => 'Just Because team_id:303 简体',
+        ),
+    '品酒要在成为夫妻后' => array(
+        'query' => '品酒要在 team_id:407',
+        ),
+    '调教咖啡厅' => array(
+        'query' => '調教咖 team_id:321',
+        'ep_pat' => '\[第(?:\d+-)?()(?:v\d| ?END)?话\]',//()表示([.\d]+)
+        ),
+    '犬屋敷' => array(
+        'query' => '犬屋敷 team_id:241 GB',
+        ),
+    '宝石之国' => array(
+        'query' => '寶石之國 team_id:407',
+        ),
+    '关于我女友是个正经' => array(
+        'query' => '女友是 team_id:468 简体',
+        ),
+    '十二大战' => array(
+        'query' => '十二大战 team_id:185 GB 720P',
+        'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
+        ),
     '如果有妹妹就好了' => array(
         'query' => '有妹妹 team_id:303 简体',
         'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
