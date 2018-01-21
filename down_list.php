@@ -6,27 +6,17 @@ $s201710 = array
     '黑色五叶草' => array(
         'query' => '五葉草 team_id:651',
         ),
-    '奇诺之旅2017' => array(
-        'query' => '奇諾 team_id:468 简体',
-        ),
     '国王游戏' => array(
         'query' => '國王遊戲 team_id:141',
         ),
     '此花亭奇谭' => array(
         'query' => '此花 team_id:679 GB',
         ),
-    'URAHARA' => array(
-        'query' => 'URAHARA team_id:669 GB 720P',
-        ),
     '食戟之灵3_ktxp' => array(
         'query' => '食戟 team_id:185 GB san',
         ),
     '干物妹2' => array(
         'query' => '干物妹 team_id:185 720P',
-        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
-        ),
-    '动画同好会' => array(
-        'query' => '動畫同好 team_id:669 GB 720P',//lac
         'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
         ),
     '血界战线' => array(
@@ -42,12 +32,12 @@ $s201710 = array
         'ep_num_file' => 'epnum/gintama.txt',
         'ep_pat' => '\[()(?:v\d)?\]',//()表示([.\d]+)
         ),
-);/*}}}*/
-$s201707 = array
-(/*{{{*/
     'Fate_Apocrypha' => array(
         'query' => 'Apocrypha team_id:58',
         'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
+        ),
+    '奇诺之旅2017' => array(
+        'query' => '奇諾 team_id:468 简体',
         ),
 );/*}}}*/
 $slong= array
@@ -68,6 +58,13 @@ return array_merge($s201707, $s201710);
 
 $s201710_done = array
 (/*{{{*/
+    'URAHARA' => array(
+        'query' => 'URAHARA team_id:669 GB 720P',
+        ),
+    '动画同好会' => array(
+        'query' => '動畫同好 team_id:669 GB 720P',//lac
+        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
+        ),
     '少女终末旅行' => array(
         'query' => '女終 team_id:468 简体',
         ),
