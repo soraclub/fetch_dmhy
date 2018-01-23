@@ -54,7 +54,7 @@ $slong= array
         ),
 );/*}}}*/
 
-return array_merge($s201707, $s201710);
+return array_merge($s201710, []);
 
 $s201710_done = array
 (/*{{{*/
