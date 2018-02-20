@@ -6,23 +6,6 @@ $s201710 = array
     '黑色五叶草' => array(
         'query' => '五葉草 team_id:651',
         ),
-    '国王游戏' => array(
-        'query' => '國王遊戲 team_id:141',
-        ),
-    '此花亭奇谭' => array(
-        'query' => '此花 team_id:679 GB',
-        ),
-    '食戟之灵3_ktxp' => array(
-        'query' => '食戟 team_id:185 GB san',
-        ),
-    '干物妹2' => array(
-        'query' => '干物妹 team_id:185 720P',
-        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
-        ),
-    '血界战线' => array(
-        'query' => '血界 BEYOND team_id:663 简体',
-        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
-        ),
     '魔法使的新娘' => array(
         'query' => '魔法使 新娘 team_id:303 简体 720P',
         'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
@@ -31,13 +14,6 @@ $s201710 = array
         'query' => 'Gintama  720P_简中 team_id:117',//lac
         'ep_num_file' => 'epnum/gintama.txt',
         'ep_pat' => '\[()(?:v\d)?\]',//()表示([.\d]+)
-        ),
-    'Fate_Apocrypha' => array(
-        'query' => 'Apocrypha team_id:58',
-        'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
-        ),
-    '奇诺之旅2017' => array(
-        'query' => '奇諾 team_id:468 简体',
         ),
 );/*}}}*/
 $slong= array
@@ -58,6 +34,30 @@ return array_merge($s201710, []);
 
 $s201710_done = array
 (/*{{{*/
+    'Fate_Apocrypha' => array(
+        'query' => 'Apocrypha team_id:58',
+        'ep_pat' => '第(?:\d+-)?()(?:v\d| ?END)?话',//()表示([.\d]+)
+        ),
+    '奇诺之旅2017' => array(
+        'query' => '奇諾 team_id:468 简体',
+        ),
+    '血界战线' => array(
+        'query' => '血界 BEYOND team_id:663 简体',
+        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
+        ),
+    '干物妹2' => array(
+        'query' => '干物妹 team_id:185 720P',
+        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
+        ),
+    '食戟之灵3_ktxp' => array(
+        'query' => '食戟 team_id:185 GB san',
+        ),
+    '此花亭奇谭' => array(
+        'query' => '此花 team_id:679 GB',
+        ),
+    '国王游戏' => array(
+        'query' => '國王遊戲 team_id:141',
+        ),
     'URAHARA' => array(
         'query' => 'URAHARA team_id:669 GB 720P',
         ),
