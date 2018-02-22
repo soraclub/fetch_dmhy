@@ -1,6 +1,30 @@
 <?php
 
 
+$s201801 = array
+(
+ //差土 日 月
+    '粗点心战争2' => array(
+        'query' => '粗點心 2 team_id:669 简日',
+        ),
+    '爆肝工程师的异世界狂想曲' => array(
+        'query' => '界狂 team_id:185 GB',
+        ),
+    '紫罗兰永恒花园' => array(
+        'query' => '紫羅蘭 team_id:303 1080P 简体',
+        ),
+    '齐木楠雄的灾难2' => array(
+        'query' => '齊木楠雄 team_id:434 第二季 720P 简体',
+        ),
+    'Overlord2' => array(
+        'query' => 'Overlord II team_id:663 简体',
+        ),
+    '擅长捉弄的高木同学' => array(
+        'query' => '擅长捉弄 team_id:303 720P 简体',
+        ),
+);
+
+
 $s201710 = array
 (/*{{{*/
     '黑色五叶草' => array(
@@ -30,7 +54,7 @@ $slong= array
         ),
 );/*}}}*/
 
-return array_merge($s201710, []);
+return array_merge($s201710, $s201801);
 
 $s201710_done = array
 (/*{{{*/
