@@ -7,8 +7,8 @@ $s201801 = array
     '粗点心战争2' => array(
         'query' => '粗點心 2 team_id:669 简日',
         ),
-    '爆肝工程师的异世界狂想曲' => array(
-        'query' => '界狂 team_id:185 GB',
+    '爆肝工程师的异世界狂想曲_mm' => array(
+        'query' => '界狂 team_id:669 GB',
         ),
     '紫罗兰永恒花园' => array(
         'query' => '紫羅蘭 team_id:303 1080P 简体',
