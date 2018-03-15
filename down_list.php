@@ -22,6 +22,18 @@ $s201801 = array
     '擅长捉弄的高木同学' => array(
         'query' => '擅长捉弄 team_id:303 720P 简体',
         ),
+    '龙王的工作' => array(
+        'query' => '龍王的 team_id:303 简体',
+        ),
+    '博多豚骨拉面' => array(
+        'query' => '博多 team_id:663 简体',
+        ),
+    '没有心跳的少女' => array(
+        'query' => 'BEATLESS team_id:303 简体 720P',
+        ),
+    '牙斗少女' => array(
+        'query' => '牙鬥 team_id:669 BIG5',
+        ),
 );
 
 
