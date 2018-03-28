@@ -19,9 +19,6 @@ $s201801 = array
     'Overlord2' => array(
         'query' => 'Overlord II team_id:663 简体',
         ),
-    '擅长捉弄的高木同学' => array(
-        'query' => '擅长捉弄 team_id:303 720P 简体',
-        ),
     '龙王的工作' => array(
         'query' => '龍王的 team_id:303 简体',
         ),
@@ -68,6 +65,12 @@ $slong= array
 
 return array_merge($s201710, $s201801);
 
+$s201801_done = array
+(/*{{{*/
+    '擅长捉弄的高木同学' => array(
+        'query' => '擅长捉弄 team_id:303 720P 简体',
+        ),
+);/*}}}*/
 $s201710_done = array
 (/*{{{*/
     'Fate_Apocrypha' => array(
