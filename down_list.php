@@ -19,9 +19,6 @@ $s201801 = array
     'Overlord2' => array(
         'query' => 'Overlord II team_id:663 简体',
         ),
-    '龙王的工作' => array(
-        'query' => '龍王的 team_id:303 简体',
-        ),
     '博多豚骨拉面' => array(
         'query' => '博多 team_id:663 简体',
         ),
@@ -38,10 +35,6 @@ $s201710 = array
 (/*{{{*/
     '黑色五叶草' => array(
         'query' => '五葉草 team_id:651',
-        ),
-    '魔法使的新娘' => array(
-        'query' => '魔法使 新娘 team_id:303 简体 720P',
-        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
         ),
     'Gintama' => array(
         'query' => 'Gintama  720P_简中 team_id:117',//lac
@@ -67,6 +60,13 @@ return array_merge($s201710, $s201801);
 
 $s201801_done = array
 (/*{{{*/
+    '龙王的工作' => array(
+        'query' => '龍王的 team_id:303 简体',
+        ),
+    '魔法使的新娘' => array(
+        'query' => '魔法使 新娘 team_id:303 简体 720P',
+        'ep_pat' => '\[(?:\d+-)?()(?: ?v\d| ?END)?\]',//()表示([.\d]+)
+        ),
     '擅长捉弄的高木同学' => array(
         'query' => '擅长捉弄 team_id:303 720P 简体',
         ),
