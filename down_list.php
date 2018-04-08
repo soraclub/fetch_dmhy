@@ -6,9 +6,6 @@ $s201801 = array
     '粗点心战争2' => array(
         'query' => '粗點心 2 team_id:669 简日',
         ),
-    '紫罗兰永恒花园' => array(
-        'query' => '紫羅蘭 team_id:303 1080P 简体',
-        ),
     '齐木楠雄的灾难2' => array(
         'query' => '齊木楠雄 team_id:434 第二季 720P 简体',
         ),
@@ -59,6 +56,9 @@ return array_merge($s201710, $s201801);
 
 $s201801_done = array
 (/*{{{*/
+    '紫罗兰永恒花园' => array(
+        'query' => '紫羅蘭 team_id:303 1080P 简体',
+        ),
     '爆肝工程师的异世界狂想曲_mm' => array(
         'query' => '界狂 team_id:669 GB',
         ),
