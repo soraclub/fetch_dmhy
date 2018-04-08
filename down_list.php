@@ -3,7 +3,6 @@
 
 $s201801 = array
 (
- //差土 日 月
     '粗点心战争2' => array(
         'query' => '粗點心 2 team_id:669 简日',
         ),
@@ -24,6 +23,9 @@ $s201801 = array
         ),
     '牙斗少女' => array(
         'query' => '牙鬥 team_id:669 BIG5',
+        ),
+    'DarlingInTheFranXX' => array(
+        'query' => 'FRANXX team_id:468 简体',
         ),
 );
 
