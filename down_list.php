@@ -9,17 +9,11 @@ $s201801 = array
     '齐木楠雄的灾难2' => array(
         'query' => '齊木楠雄 team_id:434 第二季 720P 简体',
         ),
-    'Overlord2' => array(
-        'query' => 'Overlord II team_id:663 简体',
-        ),
     '博多豚骨拉面' => array(
         'query' => '博多 team_id:663 简体',
         ),
     '没有心跳的少女' => array(
         'query' => 'BEATLESS team_id:303 简体 720P',
-        ),
-    '牙斗少女' => array(
-        'query' => '牙鬥 team_id:669 BIG5',
         ),
     'DarlingInTheFranXX' => array(
         'query' => 'FRANXX team_id:468 简体',
@@ -56,6 +50,12 @@ return array_merge($s201710, $s201801);
 
 $s201801_done = array
 (/*{{{*/
+    '牙斗少女' => array(
+        'query' => '牙鬥 team_id:669 BIG5',
+        ),
+    'Overlord2' => array(
+        'query' => 'Overlord II team_id:663 简体',
+        ),
     '紫罗兰永恒花园' => array(
         'query' => '紫羅蘭 team_id:303 1080P 简体',
         ),
