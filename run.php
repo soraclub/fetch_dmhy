@@ -39,7 +39,7 @@ foreach ($animes as $name => $conf)
     {
         $lastEp = (float)trim(file_get_contents($epNumFile));
     }
-    $epPat = $conf['ep_pat'];
+    $epPat = $conf['ep_pat'] ?? null;
     $timeBeginFrom = isset($conf['begin_from'])? strtotime($conf['begin_from']) : 0;
     $curEp = $fetcher->getTorrent($query, $prefix, $lastEp, $epPat, $timeBeginFrom);
     if ($curEp > $lastEp)
