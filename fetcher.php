@@ -4,6 +4,7 @@ class Fetcher
 {
     private $api = 'https://share.dmhy.org/topics/list?keyword=%s';
     private $host = 'https://share.dmhy.org';
+    private $rss = 'https://share.dmhy.org/topics/rss/rss.xml?keyword=%s';
 
     private $parfailCur = array();
     private $parfailPass = array();
@@ -36,6 +37,83 @@ class Fetcher
         sleep(4);
         $this->fetchHtml($url);
     }/*}}}*/
+
+    public function getMagnet($query, $rstFilePrefix, $curEp, $epPat, $timeBeginFrom) {
+        //ep num
+        //多种数字摘取
+        $patBounds = [
+            ['第', '[话集話]'],
+            ['\[', '\]'],
+            ['【', '】'],
+            [' ', ' '],
+        ];
+        $epPats =[];
+        foreach ($patBounds as list($bl, $br))
+        {
+            $epPats[] = '('.$bl.'(?:\d+[-~&])?([.\d]+)(?: ?v\d| ?END| ?完|\+.+?)?'.$br.')iumsS';
+        }
+        if (!empty($epPat)) {
+            $epPat = str_replace('()', '([.\d]+)', $epPat);
+            $epPat = "($epPat)iums";
+            array_unshift($epPats, $epPat);
+        }
+        //fetch
+        $url = sprintf($this->rss, rawurldecode($query));
+        $content = $this->fetchHtml($url);
+        $xml = simplexml_load_string($content);
+
+        $maxEpNum = -4;
+        foreach ($xml->channel->item as $item) {
+            //time
+            $pubDate =  $item->pubDate;
+            if (strtotime($pubDate) < $timeBeginFrom) {
+                continue;
+            }
+            //title
+            $title = strval($item->title);
+            if (empty($title)) {
+                echo "parse title empty";
+                return false;
+            }
+            //// pick ep num
+            $epNum = -4;
+            foreach ($epPats as $_pat) {
+                if (preg_match($_pat, $title, $match) > 0) {
+                    $epNum = $match[1];
+                    break;
+                }
+            }
+            if ($epNum === -4) {
+                echo "!! faliled to parse ep num. title: #$title#", PHP_EOL;
+                !isset($this->parfailPass[$title]) && !isset($this->parfailCur)
+                    && ($this->parfailCur[$title] = 1)
+                    && error_log($title."\n", 3, PARFAIL_CUR);
+                continue;
+            }
+            if ($epNum <= $curEp) {
+                echo "no need. req ep > $curEp, thisEp:$epNum, of #$title#\n";
+                continue;
+            }
+
+            //url
+            $enclosure = $item->enclosure->attributes();
+            $magnet = $enclosure['url'];
+            if (empty($magnet)) {
+                echo "parse magnet url empty";
+                return false;
+            }
+            $oPath = $rstFilePrefix . '_' . $epNum . '.magnet';
+            file_put_contents($oPath, $magnet);
+            echo "【GET MAGNET】【 $epNum 】【 $rstFilePrefix 】done", PHP_EOL;
+
+            //maxEpNum
+            if ($epNum > $maxEpNum) {
+                $maxEpNum = $epNum;
+            }
+        }
+        return $maxEpNum;
+    }
+
     public function getTorrent($query, $torrentPrefix, $curEp, $epPat, $timeBeginFrom)
     {/*{{{*/
         $url = sprintf($this->api, rawurlencode($query));
@@ -226,7 +304,7 @@ class Fetcher
                 //'Cookie: __cfduid=d367b6c5ea2e5e2db286b240e1bdcaa2a1490766967; cf_clearance=879bb1b6eb913304e1fefd0ae324287510cf1e66-1490766971-604800',
                 ];
 
-        $cmd = sprintf('curl -s "%s"', $url);
+        $cmd = sprintf('proxychains4 curl -s "%s"', $url);
         foreach ($headers as $header)
         {
             $cmd .= " -H'$header'";

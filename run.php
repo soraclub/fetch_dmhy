@@ -13,7 +13,8 @@ define ('COOKIE_FILE', PRJ_HOME.'/cookies.ign');
 
 $fetcher = new Fetcher();
 
-$r = $fetcher->passDdos();
+//$r = $fetcher->passDdos();
+
 
 $beginAt = date('Y-m-d H:i:s');
 $doneFile = 'cur_turn_ok.list';
@@ -41,7 +42,8 @@ foreach ($animes as $name => $conf)
     }
     $epPat = $conf['ep_pat'] ?? null;
     $timeBeginFrom = isset($conf['begin_from'])? strtotime($conf['begin_from']) : 0;
-    $curEp = $fetcher->getTorrent($query, $prefix, $lastEp, $epPat, $timeBeginFrom);
+    //$curEp = $fetcher->getTorrent($query, $prefix, $lastEp, $epPat, $timeBeginFrom);
+    $curEp = $fetcher->getMagnet($query, $prefix, $lastEp, $epPat, $timeBeginFrom);
     if ($curEp > $lastEp)
     {
         file_put_contents($epNumFile, $curEp);
