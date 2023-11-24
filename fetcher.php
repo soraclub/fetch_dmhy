@@ -4,7 +4,7 @@ class Fetcher
 {
     private $api = 'https://share.dmhy.org/topics/list?keyword=%s';
     private $host = 'https://share.dmhy.org';
-    private $rss = 'https://share.dmhy.org/topics/rss/rss.xml?keyword=%s';
+    private $rss = 'https://share.dmhy.org/topics/rss/rss.xml?%s';
 
     private $parfailCur = array();
     private $parfailPass = array();
@@ -58,7 +58,17 @@ class Fetcher
             array_unshift($epPats, $epPat);
         }
         //fetch
-        $url = sprintf($this->rss, rawurldecode($query));
+        $qStr = '';
+        if (is_array($query)) {
+            $qStr = http_build_query($query);
+        } else if (is_string($query)) {
+            $qStr = http_build_query(['keyword' => $query]);
+        }
+        if ($qStr === '') {
+            echo "param query is incorrect: ".json_encode($query);
+            return false;
+        }
+        $url = sprintf($this->rss, $qStr);
         $content = $this->fetchHtml($url);
         $xml = simplexml_load_string($content);
 
@@ -123,6 +133,7 @@ class Fetcher
 
         //parse list
         //table body
+        $match = [];
         if (preg_match('|<tbody>(.+?)</tbody>|iums', $content, $match) < 1)
         {
             echo "match tbody fail\n";
@@ -177,6 +188,7 @@ class Fetcher
             $pubTime = $uri_name['pubTime'];
 
             //pick ep num
+            $epNum = -9;
             $_foundEp = false;
             foreach ($epPats as $_pat)
             {

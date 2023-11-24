@@ -54,7 +54,7 @@ foreach ($animes as $name => $conf)
 
 
 echo "\n*-*-*-*-*- 【new gets】 *-*-*-*-*-*-*-*\n";
-$cmd = "find $dir -type f -newermt '$beginAt' -exec basename {} \;";
+$cmd = "find $dir -type f -newermt '$beginAt' -exec basename {} \; | sort";
 system($cmd);
 unlink($doneFile);
 
