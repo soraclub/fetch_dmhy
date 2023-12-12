@@ -305,14 +305,14 @@ class Fetcher
     private function fetchHtml($url)
     {/*{{{*/
         $headers = [
-                'Host: share.dmhy.org',
-                'Proxy-Connection: keep-alive',
-                'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-                'Upgrade-Insecure-Requests: 1',
-                'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
-                'Referer: https://share.dmhy.org/',
-                'Accept-Encoding: deflate',
-                'Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,ja;q=0.4,zh-TW;q=0.2',
+                //'Host: share.dmhy.org',
+                //'Proxy-Connection: keep-alive',
+                //'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                //'Upgrade-Insecure-Requests: 1',
+                //'User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+                //'Referer: https://share.dmhy.org/',
+                //'Accept-Encoding: deflate',
+                //'Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,ja;q=0.4,zh-TW;q=0.2',
                 //'Cookie: __cfduid=d367b6c5ea2e5e2db286b240e1bdcaa2a1490766967; cf_clearance=879bb1b6eb913304e1fefd0ae324287510cf1e66-1490766971-604800',
                 ];
 
@@ -322,7 +322,9 @@ class Fetcher
             $cmd .= " -H'$header'";
         }
         //COOKIE里放着 穿DDos check的cookie
-        $cmd .= sprintf(' -c %1$s -b %1$s', COOKIE_FILE);
+        //$cmd .= sprintf(' -c %1$s -b %1$s', COOKIE_FILE);
+
+        echo "> ", $cmd, PHP_EOL;
         exec($cmd, $out, $status);
         return implode("\n", $out);
     }/*}}}*/
