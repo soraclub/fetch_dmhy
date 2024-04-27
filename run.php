@@ -35,7 +35,7 @@ foreach ($animes as $name => $conf)
     $query = $conf['query'];
     $prefix = $dir.'/'.$name;
     $epNumFile = isset($conf['ep_num_file']) ? $conf['ep_num_file'] : "epnum/$name";
-    $lastEp = 0;
+    $lastEp = -1; //还有第00集这种东西
     if (is_file($epNumFile))
     {
         $lastEp = (float)trim(file_get_contents($epNumFile));
