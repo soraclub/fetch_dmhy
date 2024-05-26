@@ -6,7 +6,8 @@ $animes = require(PRJ_HOME. '/down_list.php');
 define ('PARFAIL_CUR', 'parsefail/cur.list');
 define ('PARFAIL_PASS', 'parsefail/pass.list');
 
-$dir = PRJ_HOME. '/'. date("Y-m-d");
+//$dir = PRJ_HOME. '/'. date("Y-m-d");
+$dir = PRJ_HOME. '/todo' ;
 is_dir($dir) || mkdir($dir, 0777);
 define ('TORRENT_URLS', $dir.'/torrent_url.txt');
 define ('COOKIE_FILE', PRJ_HOME.'/cookies.ign');
