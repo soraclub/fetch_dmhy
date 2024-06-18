@@ -1,4 +1,8 @@
-.PHONY: build
+.PHONY: build todo
+
+all: run mag 
+	sleep 2
+	make todo
 
 run:
 	php run.php
